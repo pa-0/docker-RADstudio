@@ -4,7 +4,7 @@ RAD Studio docker images
 # Usage
 
 ```Dockerfile
-FROM magicxor/radstudio:10.1-delphi-net3.5-ltsc2019
+FROM magicxor/radstudio:xe-delphi-net3.5-ltsc2019
 SHELL ["powershell"]
 
 COPY YourApp /build/app
