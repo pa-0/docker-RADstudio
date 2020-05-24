@@ -1,0 +1,107 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ProjectExtensions>
+        <Borland.Personality>Environment.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Environment.Personality/>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup/>
+    <PropertyGroup Condition="'$(Platform)'=='iOSDevice'">
+        <ENV_PF_DevDebug>iPhone Developer</ENV_PF_DevDebug>
+        <ENV_PF_DevAdHoc>iPhone Distribution</ENV_PF_DevAdHoc>
+        <ENV_PF_AdHoc/>
+        <ENV_PF_DevAppStore>iPhone Distribution</ENV_PF_DevAppStore>
+        <ENV_PF_AppStore/>
+        <ENV_PF_DevTeamIdAppStore/>
+        <DefaultPlatformSDK/>
+        <DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)\$(Configuration)</DelphiDCPOutput>
+        <DelphiLibraryPath>$(BDSLIB)\$(PLATFORM)\Release</DelphiLibraryPath>
+        <DelphiBrowsingPath>$(BDS)\OCX\Servers;$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\ios;$(BDS)\source\rtl\osx;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;$(BDS)\source\rtl\posix;$(BDS)\source\rtl\posix\osx;$(BDS)\source\data\datasnap\connectors;$(BDS)\source\data\datasnap\proxygen;$(BDS)\source\DataExplorer;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common\dunit;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject\dunit;$(BDS)\source\DUnit\src;$(BDS)\source\DUnit\tests;$(BDS)\source\Experts;$(BDS)\source\indy\abstraction;$(BDS)\source\indy\implementation;$(BDS)\source\indyimpl;$(BDS)\source\LiveTile;$(BDS)\source\Property Editors\Indy10;$(BDS)\source\soap\wsdlimporter;$(BDS)\source\Visualizers;$(BDS)\source\xtab;$(BDS)\source\DUnit\Contrib\XMLReporting;$(BDS)\source\DUnit\Contrib\XPGen;$(BDS)\source\data\rest;</DelphiBrowsingPath>
+        <DelphiNamespaceSearchPath/>
+        <DelphiDebugDCUPath>$(BDSLIB)\$(PLATFORM)\debug</DelphiDebugDCUPath>
+        <DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(PLATFORM)\$(Configuration)</DelphiDLLOutputPath>
+        <DelphiHPPOutputPath/>
+        <DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+        <DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+        <DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+        <DefaultProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)'=='Android'">
+        <ENV_PF_KeyStore/>
+        <ENV_PF_KeyStorePass/>
+        <ENV_PF_AliasKey/>
+        <ENV_PF_AliasKeyPass/>
+        <DefaultPlatformSDK/>
+        <DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)\$(Configuration)</DelphiDCPOutput>
+        <DelphiLibraryPath>$(BDSLIB)\$(PLATFORM)\Release</DelphiLibraryPath>
+        <DelphiBrowsingPath>$(BDS)\OCX\Servers;$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\android;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;$(BDS)\source\rtl\posix;$(BDS)\source\rtl\posix\osx;$(BDS)\source\data\datasnap\connectors;$(BDS)\source\data\datasnap\proxygen;$(BDS)\source\DataExplorer;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common\dunit;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject\dunit;$(BDS)\source\DUnit\src;$(BDS)\source\DUnit\tests;$(BDS)\source\Experts;$(BDS)\source\indy\abstraction;$(BDS)\source\indy\implementation;$(BDS)\source\indyimpl;$(BDS)\source\LiveTile;$(BDS)\source\Property Editors\Indy10;$(BDS)\source\soap\wsdlimporter;$(BDS)\source\Visualizers;$(BDS)\source\xtab;$(BDS)\source\DUnit\Contrib\XMLReporting;$(BDS)\source\DUnit\Contrib\XPGen;$(BDS)\source\data\rest;</DelphiBrowsingPath>
+        <DelphiNamespaceSearchPath/>
+        <DelphiDebugDCUPath>$(BDSLIB)\$(PLATFORM)\debug</DelphiDebugDCUPath>
+        <DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(PLATFORM)\$(Configuration)</DelphiDLLOutputPath>
+        <DelphiHPPOutputPath/>
+        <DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+        <DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+        <DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+        <DefaultProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)'=='Win32'">
+        <DefaultPlatformSDK/>
+        <DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp</DelphiDCPOutput>
+        <DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp;$(BDS)\include;C:\Program Files (x86)\FastReports\LibD19</DelphiLibraryPath>
+        <DelphiBrowsingPath>$(BDS)\OCX\Servers;$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\win;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;$(BDS)\source\data\datasnap\connectors;$(BDS)\source\data\datasnap\proxygen;$(BDS)\source\DataExplorer;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common\dunit;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject\dunit;$(BDS)\source\DUnit\src;$(BDS)\source\DUnit\tests;$(BDS)\source\Experts;$(BDS)\source\indy\abstraction;$(BDS)\source\indy\implementation;$(BDS)\source\indyimpl;$(BDS)\source\LiveTile;$(BDS)\source\Property Editors\Indy10;$(BDS)\source\soap\wsdlimporter;$(BDS)\source\Visualizers;$(BDS)\source\xtab;$(BDS)\source\DUnit\Contrib\XMLReporting;$(BDS)\source\DUnit\Contrib\XPGen;$(BDS)\source\data\rest;;C:\Program Files (x86)\FastReports\LibD19</DelphiBrowsingPath>
+        <DelphiNamespaceSearchPath/>
+        <DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+        <DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl</DelphiDLLOutputPath>
+        <DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+        <DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+        <DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+        <DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+        <DefaultProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)'=='OSX32'">
+        <DefaultPlatformSDK/>
+        <ENV_PF_DevSandBox>Mac Developer</ENV_PF_DevSandBox>
+        <ENV_PF_SandBox>3rd Party Mac Developer Installer</ENV_PF_SandBox>
+        <DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)</DelphiDCPOutput>
+        <DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp\$(Platform);$(BDS)\include</DelphiLibraryPath>
+        <DelphiBrowsingPath>$(BDS)\OCX\Servers;$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\osx;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;$(BDS)\source\rtl\posix;$(BDS)\source\rtl\posix\osx;$(BDS)\source\data\datasnap\connectors;$(BDS)\source\data\datasnap\proxygen;$(BDS)\source\DataExplorer;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common\dunit;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject\dunit;$(BDS)\source\DUnit\src;$(BDS)\source\DUnit\tests;$(BDS)\source\Experts;$(BDS)\source\indy\abstraction;$(BDS)\source\indy\implementation;$(BDS)\source\indyimpl;$(BDS)\source\LiveTile;$(BDS)\source\Property Editors\Indy10;$(BDS)\source\soap\wsdlimporter;$(BDS)\source\Visualizers;$(BDS)\source\xtab;$(BDS)\source\DUnit\Contrib\XMLReporting;$(BDS)\source\DUnit\Contrib\XPGen;$(BDS)\source\data\rest;</DelphiBrowsingPath>
+        <DelphiNamespaceSearchPath/>
+        <DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+        <DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(Platform)</DelphiDLLOutputPath>
+        <DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+        <DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+        <DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+        <DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+        <DefaultProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)'=='Win64'">
+        <DefaultPlatformSDK/>
+        <DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)</DelphiDCPOutput>
+        <DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp\$(Platform);$(BDS)\include;C:\Program Files (x86)\FastReports\LibD19x64</DelphiLibraryPath>
+        <DelphiBrowsingPath>$(BDS)\OCX\Servers;$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\win;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;$(BDS)\source\data\datasnap\connectors;$(BDS)\source\data\datasnap\proxygen;$(BDS)\source\DataExplorer;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common\dunit;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject\dunit;$(BDS)\source\DUnit\src;$(BDS)\source\DUnit\tests;$(BDS)\source\Experts;$(BDS)\source\indy\abstraction;$(BDS)\source\indy\implementation;$(BDS)\source\indyimpl;$(BDS)\source\LiveTile;$(BDS)\source\Property Editors\Indy10;$(BDS)\source\soap\wsdlimporter;$(BDS)\source\Visualizers;$(BDS)\source\xtab;$(BDS)\source\DUnit\Contrib\XMLReporting;$(BDS)\source\DUnit\Contrib\XPGen;$(TP)\runtime\vcl;$(BDS)\source\data\rest;;C:\Program Files (x86)\FastReports\LibD19x64</DelphiBrowsingPath>
+        <DelphiNamespaceSearchPath/>
+        <DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+        <DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(Platform)</DelphiDLLOutputPath>
+        <DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+        <DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+        <DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+        <DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+        <DefaultProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)'=='iOSSimulator'">
+        <DefaultPlatformSDK/>
+        <DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)\$(Configuration)</DelphiDCPOutput>
+        <DelphiLibraryPath>$(BDSLIB)\$(PLATFORM)\Release</DelphiLibraryPath>
+        <DelphiBrowsingPath>$(BDS)\OCX\Servers;$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\ios;$(BDS)\source\rtl\osx;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;$(BDS)\source\rtl\posix;$(BDS)\source\rtl\posix\osx;$(BDS)\source\data\datasnap\connectors;$(BDS)\source\data\datasnap\proxygen;$(BDS)\source\DataExplorer;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\Common\dunit;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\Common;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject;$(BDS)\source\DUnit\Contrib\DUnitWizard\Source\DelphiExperts\DUnitProject\dunit;$(BDS)\source\DUnit\src;$(BDS)\source\DUnit\tests;$(BDS)\source\Experts;$(BDS)\source\indy\abstraction;$(BDS)\source\indy\implementation;$(BDS)\source\indyimpl;$(BDS)\source\LiveTile;$(BDS)\source\Property Editors\Indy10;$(BDS)\source\soap\wsdlimporter;$(BDS)\source\Visualizers;$(BDS)\source\xtab;$(BDS)\source\DUnit\Contrib\XMLReporting;$(BDS)\source\DUnit\Contrib\XPGen;$(BDS)\source\data\rest;</DelphiBrowsingPath>
+        <DelphiNamespaceSearchPath/>
+        <DelphiDebugDCUPath>$(BDSLIB)\$(PLATFORM)\debug</DelphiDebugDCUPath>
+        <DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(Platform)\$(Configuration)</DelphiDLLOutputPath>
+        <DelphiHPPOutputPath/>
+        <DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+        <DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+        <DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+        <DefaultProfile/>
+    </PropertyGroup>
+</Project>
