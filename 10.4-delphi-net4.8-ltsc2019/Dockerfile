@@ -3,6 +3,7 @@ SHELL ["powershell"]
 
 COPY DockerBuild/extract.ps1 /temp/download/extract.ps1
 COPY DockerBuild/copy.ps1 /temp/download/copy.ps1
+COPY DockerBuild/hotfix.ps1 /temp/download/hotfix.ps1
 COPY DockerBuild/EnvOptions.proj /temp/download/EnvOptions.proj
 
 RUN $ErrorActionPreference = 'Stop'; \
@@ -35,6 +36,9 @@ RUN $ErrorActionPreference = 'Stop'; \
     Remove-Item -Recurse -Force 'C:\temp\download\radstudio_gof'; \
     # copy radstudio files
     /temp/download/copy.ps1; \
+    # apply hotfixes
+    /temp/download/hotfix.ps1; \
+    # clean-up
     Remove-Item -Recurse -Force /temp/download; \
     # set path
     [System.Environment]::SetEnvironmentVariable('BDS', 'C:\Program Files (x86)\Embarcadero\Studio\21.0', [System.EnvironmentVariableTarget]::Machine); \
