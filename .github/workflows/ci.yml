@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: ['master']
+
+env:
+  DOCKER_IMAGE_PATH: ${{ secrets.DOCKERHUB_USERNAME }}/radstudio
+
+jobs:
+  path-context:
+    runs-on: windows-2019
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: xe5upd2 - Build and push
+        uses: docker/build-push-action@v2
+        env:
+          DOCKER_TAG: xe5upd2-delphi-net3.5-ltsc2019
+        with:
+          context: ${{ env.DOCKER_TAG }}
+          file: ${{ env.DOCKER_TAG }}/Dockerfile
+          platforms: windows/amd64
+          push: true
+          tags: ${{ env.DOCKER_IMAGE_PATH }}:${{ env.DOCKER_TAG }}
