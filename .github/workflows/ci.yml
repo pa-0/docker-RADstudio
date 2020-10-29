@@ -13,7 +13,6 @@ env:
   DOCKER_TAG_xe8: xe8upd1-delphi-net3.5-ltsc2019
   DOCKER_TAG_10_3: 10.3.3-delphi-net4.8-ltsc2019
   DOCKER_TAG_10_4: 10.4-delphi-net4.8-ltsc2019
-  GIT_REPO: https://github.com/magicxor/radstudio-docker.git
 
 jobs:
   check:
@@ -26,11 +25,15 @@ jobs:
       run_10_3: ${{ steps.check_files.outputs.run_10_3 }}
       run_10_4: ${{ steps.check_files.outputs.run_10_4 }}
     runs-on: ubuntu-latest
+    env:
+      GIT_REPO_NAME: radstudio-docker
+      GIT_REPO_URI: https://github.com/magicxor/radstudio-docker.git
     steps:
       - name: Check modified files
         id: check_files
         run: |
-          git clone ${{ env.GIT_REPO }}
+          git clone ${{ env.GIT_REPO_URI }}
+          cd ${{ env.GIT_REPO_NAME }}
           git diff --name-only HEAD^ HEAD > files.txt
           run_xe=false
           run_xe2=false
