@@ -1,6 +1,8 @@
 # radstudio-docker
 RAD Studio docker images
 
+![ci](https://github.com/magicxor/radstudio-docker/workflows/ci/badge.svg)
+
 # Usage
 
 ```Dockerfile
