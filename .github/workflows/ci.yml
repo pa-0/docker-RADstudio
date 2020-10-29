@@ -7,23 +7,211 @@ on:
 env:
   DOCKER_IMAGE_PATH: ${{ secrets.DOCKERHUB_USERNAME }}/radstudio
   DOCKER_REGISTRY: docker.io
+  DOCKER_TAG_xe: xe-delphi-net3.5-ltsc2019
+  DOCKER_TAG_xe2: xe2upd4.1-delphi-net3.5-ltsc2019
+  DOCKER_TAG_xe5: xe5upd2-delphi-net3.5-ltsc2019
+  DOCKER_TAG_xe8: xe8upd1-delphi-net3.5-ltsc2019
+  DOCKER_TAG_10_3: 10.3.3-delphi-net4.8-ltsc2019
+  DOCKER_TAG_10_4: 10.4-delphi-net4.8-ltsc2019
 
 jobs:
-  path-context:
+  check:
+    name: Check files
+    outputs:
+      run_xe: ${{ steps.check_files.outputs.run_xe }}
+      run_xe2: ${{ steps.check_files.outputs.run_xe2 }}
+      run_xe5: ${{ steps.check_files.outputs.run_xe5 }}
+      run_xe8: ${{ steps.check_files.outputs.run_xe8 }}
+      run_10_3: ${{ steps.check_files.outputs.run_10_3 }}
+      run_10_4: ${{ steps.check_files.outputs.run_10_4 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check modified files
+        id: check_files
+        run: |
+          git diff --name-only HEAD^ HEAD > files.txt
+          run_xe=false
+          run_xe2=false
+          run_xe5=false
+          run_xe8=false
+          run_10_3=false
+          run_10_4=false
+          while IFS= read -r file
+          do
+            if [ "$run_xe" = true ]; then
+              :;
+            else
+              if [[ $file != ${{ env.DOCKER_TAG_xe }}/* ]]; then run_xe=false; else run_xe=true; fi
+            fi
+
+            if [ "$run_xe2" = true ]; then
+              :;
+            else
+              if [[ $file != ${{ env.DOCKER_TAG_xe2 }}/* ]]; then run_xe2=false; else run_xe2=true; fi
+            fi
+
+            if [ "$run_xe5" = true ]; then
+              :;
+            else
+              if [[ $file != ${{ env.DOCKER_TAG_xe5 }}/* ]]; then run_xe5=false; else run_xe5=true; fi
+            fi
+
+            if [ "$run_xe8" = true ]; then
+              :;
+            else
+              if [[ $file != ${{ env.DOCKER_TAG_xe8 }}/* ]]; then run_xe8=false; else run_xe8=true; fi
+            fi
+
+            if [ "$run_10_3" = true ]; then
+              :;
+            else
+              if [[ $file != ${{ env.DOCKER_TAG_10_3 }}/* ]]; then run_10_3=false; else run_10_3=true; fi
+            fi
+            
+            if [ "$run_10_4" = true ]; then
+              :;
+            else
+              if [[ $file != ${{ env.DOCKER_TAG_10_4 }}/* ]]; then run_10_4=false; else run_10_4=true; fi
+            fi
+          done < files.txt
+          echo "::set-output name=run_xe::$run_xe"
+          echo "::set-output name=run_xe2::$run_xe2"
+          echo "::set-output name=run_xe5::$run_xe5"
+          echo "::set-output name=run_xe8::$run_xe8"
+          echo "::set-output name=run_10_3::$run_10_3"
+          echo "::set-output name=run_10_4::$run_10_4"
+
+  run_xe:
+    name: run_xe
+    needs: check
+    if: needs.check.outputs.run_xe == 'true'
     runs-on: windows-2019
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: xe5upd2 - Build and push
+      - name: Build and push
         uses: mr-smithers-excellent/docker-build-push@v4
         env:
-          DOCKER_TAG: xe5upd2-delphi-net3.5-ltsc2019
+          DOCKER_TAG: ${{ env.DOCKER_TAG_xe }}
         with:
           image: ${{ env.DOCKER_IMAGE_PATH }}
           tag: ${{ env.DOCKER_TAG }}
           registry: ${{ env.DOCKER_REGISTRY }}
           directory: ${{ env.DOCKER_TAG }}
           dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  run_xe2:
+    name: run_xe2
+    needs: check
+    if: needs.check.outputs.run_xe2 == 'true'
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and push
+        uses: mr-smithers-excellent/docker-build-push@v4
+        env:
+          DOCKER_TAG: ${{ env.DOCKER_TAG_xe2 }}
+        with:
+          image: ${{ env.DOCKER_IMAGE_PATH }}
+          tag: ${{ env.DOCKER_TAG }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+          directory: ${{ env.DOCKER_TAG }}
+          dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  run_xe5:
+    name: run_xe5
+    needs: check
+    if: needs.check.outputs.run_xe5 == 'true'
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and push
+        uses: mr-smithers-excellent/docker-build-push@v4
+        env:
+          DOCKER_TAG: ${{ env.DOCKER_TAG_xe5 }}
+        with:
+          image: ${{ env.DOCKER_IMAGE_PATH }}
+          tag: ${{ env.DOCKER_TAG }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+          directory: ${{ env.DOCKER_TAG }}
+          dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  run_xe8:
+    name: run_xe8
+    needs: check
+    if: needs.check.outputs.run_xe8 == 'true'
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and push
+        uses: mr-smithers-excellent/docker-build-push@v4
+        env:
+          DOCKER_TAG: ${{ env.DOCKER_TAG_xe8 }}
+        with:
+          image: ${{ env.DOCKER_IMAGE_PATH }}
+          tag: ${{ env.DOCKER_TAG }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+          directory: ${{ env.DOCKER_TAG }}
+          dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  run_10_3:
+    name: run_10_3
+    needs: check
+    if: needs.check.outputs.run_10_3 == 'true'
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and push
+        uses: mr-smithers-excellent/docker-build-push@v4
+        env:
+          DOCKER_TAG: ${{ env.DOCKER_TAG_10_3 }}
+        with:
+          image: ${{ env.DOCKER_IMAGE_PATH }}
+          tag: ${{ env.DOCKER_TAG }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+          directory: ${{ env.DOCKER_TAG }}
+          dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  run_10_4:
+    name: run_10_4
+    needs: check
+    if: needs.check.outputs.run_10_4 == 'true'
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build and push
+        uses: mr-smithers-excellent/docker-build-push@v4
+        env:
+          DOCKER_TAG: ${{ env.DOCKER_TAG_10_4 }}
+        with:
+          image: ${{ env.DOCKER_IMAGE_PATH }}
+          tag: ${{ env.DOCKER_TAG }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+          directory: ${{ env.DOCKER_TAG }}
+          dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
