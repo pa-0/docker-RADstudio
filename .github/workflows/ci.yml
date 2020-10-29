@@ -23,6 +23,7 @@ jobs:
           image: ${{ env.DOCKER_IMAGE_PATH }}
           tag: ${{ env.DOCKER_TAG }}
           registry: ${{ env.DOCKER_REGISTRY }}
+          directory: ${{ env.DOCKER_TAG }}
           dockerfile: ${{ env.DOCKER_TAG }}/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
