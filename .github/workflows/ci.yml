@@ -89,7 +89,7 @@ jobs:
   run_xe:
     name: run_xe
     needs: check
-    if: needs.check.outputs.run_xe == 'true'
+    if: needs.check.outputs.run_xe == 'false'
     runs-on: windows-2019
     steps:
       - name: Checkout
@@ -111,7 +111,7 @@ jobs:
   run_xe2:
     name: run_xe2
     needs: check
-    if: needs.check.outputs.run_xe2 == 'true'
+    if: needs.check.outputs.run_xe2 == 'false'
     runs-on: windows-2019
     steps:
       - name: Checkout
@@ -133,7 +133,7 @@ jobs:
   run_xe5:
     name: run_xe5
     needs: check
-    if: needs.check.outputs.run_xe5 == 'true'
+    if: needs.check.outputs.run_xe5 == 'false'
     runs-on: windows-2019
     steps:
       - name: Checkout
@@ -155,7 +155,7 @@ jobs:
   run_xe8:
     name: run_xe8
     needs: check
-    if: needs.check.outputs.run_xe8 == 'true'
+    if: needs.check.outputs.run_xe8 == 'false'
     runs-on: windows-2019
     steps:
       - name: Checkout
@@ -177,7 +177,7 @@ jobs:
   run_10_3:
     name: run_10_3
     needs: check
-    if: needs.check.outputs.run_10_3 == 'true'
+    if: needs.check.outputs.run_10_3 == 'false'
     runs-on: windows-2019
     steps:
       - name: Checkout
@@ -199,7 +199,7 @@ jobs:
   run_10_4:
     name: run_10_4
     needs: check
-    if: needs.check.outputs.run_10_4 == 'true'
+    if: needs.check.outputs.run_10_4 == 'false'
     runs-on: windows-2019
     steps:
       - name: Checkout
