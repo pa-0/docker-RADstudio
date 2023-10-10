@@ -1,0 +1,50 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<ProjectExtensions>
+			<Borland.Personality>Environment.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Environment.Personality/>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<PropertyGroup/>
+		<PropertyGroup Condition="'$(Platform)'=='Win64'">
+			<DefaultProfile/>
+			<DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)</DelphiDCPOutput>
+			<DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp\$(Platform);$(BDS)\include;C:\Program Files (x86)\FastReports\LibD16x64</DelphiLibraryPath>
+			<DelphiBrowsingPath>$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\win;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\db;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\fmi;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;;C:\Program Files (x86)\FastReports\LibD16x64</DelphiBrowsingPath>
+			<DelphiNamespaceSearchPath/>
+			<DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+			<DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(Platform)</DelphiDLLOutputPath>
+			<DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+			<DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+			<DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+			<DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Platform)'=='OSX32'">
+			<DefaultProfile/>
+			<DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp\$(Platform)</DelphiDCPOutput>
+			<DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp\$(Platform);$(BDS)\include</DelphiLibraryPath>
+			<DelphiBrowsingPath>$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\osx;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\db;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\fmi;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;</DelphiBrowsingPath>
+			<DelphiNamespaceSearchPath/>
+			<DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+			<DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl\$(Platform)</DelphiDLLOutputPath>
+			<DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+			<DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+			<DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+			<DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Platform)'=='Win32'">
+			<DefaultProfile/>
+			<DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp</DelphiDCPOutput>
+			<DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp;$(BDS)\include;C:\Program Files (x86)\FastReports\LibD16</DelphiLibraryPath>
+			<DelphiBrowsingPath>$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\win;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\db;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\fmx;$(BDS)\source\databinding\components;$(BDS)\source\databinding\engine;$(BDS)\source\databinding\graph;$(BDS)\source\fmi;$(BDS)\source\data;$(BDS)\source\data\ado;$(BDS)\source\data\bde;$(BDS)\source\data\cloud;$(BDS)\source\data\datasnap;$(BDS)\source\data\dbx;$(BDS)\source\data\dsnap;$(BDS)\source\data\Test;$(BDS)\source\data\vclctrls;;C:\Program Files (x86)\FastReports\LibD16</DelphiBrowsingPath>
+			<DelphiNamespaceSearchPath/>
+			<DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+			<DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl</DelphiDLLOutputPath>
+			<DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+			<DelphiTranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedLibraryPath>
+			<DelphiTranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</DelphiTranslatedDebugLibraryPath>
+			<DelphiTranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</DelphiTranslatedResourcePath>
+		</PropertyGroup>
+	</Project>

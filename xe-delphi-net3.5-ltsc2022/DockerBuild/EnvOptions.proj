@@ -1,0 +1,22 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F33704E7-A117-4146-A7B0-4BCA038C9247}</ProjectGuid>
+			<Win32TranslatedLibraryPath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</Win32TranslatedLibraryPath>
+			<Win32TranslatedDebugLibraryPath>$(BDSLIB)\$(Platform)\debug\$(LANGDIR)</Win32TranslatedDebugLibraryPath>
+			<Win32TranslatedResourcePath>$(BDSLIB)\$(Platform)\release\$(LANGDIR)</Win32TranslatedResourcePath>
+			<DelphiDCPOutput>$(BDSCOMMONDIR)\Dcp</DelphiDCPOutput>
+			<DelphiLibraryPath>$(BDSLIB)\$(Platform)\release;$(BDSUSERDIR)\Imports;$(BDS)\Imports;$(BDSCOMMONDIR)\Dcp;$(BDS)\include</DelphiLibraryPath>
+			<DelphiBrowsingPath>$(BDS)\SOURCE\VCL;$(BDS)\source\rtl\common;$(BDS)\SOURCE\RTL\SYS;$(BDS)\source\rtl\win;$(BDS)\source\ToolsAPI;$(BDS)\SOURCE\IBX;$(BDS)\source\Internet;$(BDS)\SOURCE\PROPERTY EDITORS;$(BDS)\source\soap;$(BDS)\SOURCE\XML;$(BDS)\source\db;$(BDS)\source\Indy10\Core;$(BDS)\source\Indy10\System;$(BDS)\source\Indy10\Protocols;$(BDS)\source\database;</DelphiBrowsingPath>
+			<DelphiDebugDCUPath>$(BDSLIB)\$(Platform)\debug</DelphiDebugDCUPath>
+			<DelphiDLLOutputPath>$(BDSCOMMONDIR)\Bpl</DelphiDLLOutputPath>
+			<DelphiHPPOutputPath>$(BDSCOMMONDIR)\hpp</DelphiHPPOutputPath>
+		</PropertyGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Environment.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Environment.Personality/>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
