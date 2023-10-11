@@ -1,4 +1,4 @@
-name: ci
+name: ci_ltsc2019
 
 on:
   push:
@@ -72,7 +72,7 @@ jobs:
             else
               if [[ $file != ${{ env.DOCKER_TAG_10_3 }}/* ]]; then run_10_3=false; else run_10_3=true; fi
             fi
-            
+
             if [ "$run_10_4" = true ]; then
               :;
             else
