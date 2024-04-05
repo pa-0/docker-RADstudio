@@ -12,7 +12,7 @@ RUN $ErrorActionPreference = 'Stop'; \
     $uri_7z = 'https://www.7-zip.org/a/7z1900-x64.exe'; \
     $uri_aria2 = 'https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0-win-64bit-build1.zip'; \
     $uri_radstudio = 'http://altd.embarcadero.com/download/radstudio/10.4/radstudio_10_4_99797b.iso'; \
-    $uri_innounp = 'https://github.com/magicxor/radstudio-docker/releases/download/0.49/innounp.exe'; \
+    $uri_innounp = 'https://github.com/WhatTheBlock/innounp/releases/download/v0.50/innounp.exe'; \
     # install 7-zip
     Invoke-WebRequest -Uri $uri_innounp -OutFile /temp/download/innounp.exe -PassThru -UseBasicParsing; \
     Invoke-WebRequest -Uri $uri_7z -OutFile /temp/download/7z.exe -PassThru -UseBasicParsing; \
