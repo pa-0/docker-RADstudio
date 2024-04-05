@@ -1,9 +1,6 @@
 # radstudio-docker
 RAD Studio docker images
 
-[![ci_ltsc2019](https://github.com/magicxor/radstudio-docker/actions/workflows/ci_ltsc2019.yml/badge.svg)](https://github.com/magicxor/radstudio-docker/actions/workflows/ci_ltsc2019.yml)
-[![ci_ltsc2022](https://github.com/magicxor/radstudio-docker/actions/workflows/ci_ltsc2022.yml/badge.svg)](https://github.com/magicxor/radstudio-docker/actions/workflows/ci_ltsc2022.yml)
-
 # Usage
 
 ```Dockerfile
